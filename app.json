@@ -1,0 +1,33 @@
+{
+  "name": "Ultra-Video",
+  "repository": "https://github.com/Puutraaa/ultra-video",
+  "stack": "container",
+  "env": {
+    "SESSION_NAME": {
+      "description": "Masukan String Session Pyrogram (P) untuk assistant yang naik ke VCG",
+      "required": true
+    },
+    "API_ID": {
+      "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau @Kenkanrobot",
+      "required": true
+    },   
+    "API_HASH": {
+      "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps atau @Kenkanrobot",
+      "required": true
+    }
+  },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "heroku-20"
+}
+}
