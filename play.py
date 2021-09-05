@@ -21,7 +21,7 @@ async def stream(client, m: Message):
         chat_id = m.chat.id
         try:
             video = await client.download_media(m.reply_to_message)
-            await msg.edit("🔁 **Memproses**")
+            await msg.edit("🔁 **Sabar Ngentod Lagi Proses**")
             os.system(f'ffmpeg -i "{video}" -vn -f s16le -ac 2 -ar 48000 -acodec pcm_s16le -filter:a "atempo=0.81" vid-{chat_id}.raw -y')
             print()
         except Exception as e:
